@@ -7,14 +7,16 @@ void setup(){
      size(500,500);
      
      // Call the makeIceCreamCone() method below to draw the cone for your ice cream
-
+     makeIceCreamCone();
      // Use the addScoop method below to add as many scoops of ice cream as you want
      // Choose a different flavor for each scoop
-
+     addScoop("chocolate");
+     addScoop("Vanilla");
+     addScoop("chocolate");
      // Use the method provided to add some sprinkles to your ice cream
-
+     addSprinkle(10);
      // Write code to add a cherry to the top of your ice cream. Hint: ellipse
-
+     addCherry(1);
 }
 
 /***********  These are methods for you to use. DON'T CHANGE CODE BELOW THIS LINE !!!   *****************/
@@ -64,4 +66,17 @@ void addSprinkle(int numberOfSprinkles){
          int sprinkleHeight = (int)random(2,9);
          ellipse(sprinkleAreaX,sprinkleAreaY,sprinkleHeight,sprinkleWidth);
      }
+}
+
+void addCherry(int numberOfCherrys){
+  for(int i = 0; i < numberOfCherrys; i++){
+    fill(0,0,255);
+    int minX = width/2-SCOOPSIZE/2 + 10;
+    int maxX = SCOOPSIZE/3 +width/2 +10;
+    int minY = coneY-(SCOOPSIZE)/2-40;
+    int maxY = coneY*SCOOPSIZE;
+    int CherryAreaX = (int)random(minX, maxX);
+    int CherryAreaY = (int)random(minY, maxY);
+    ellipse(CherryAreaX,CherryAreaY,20,20);
+  }
 }
