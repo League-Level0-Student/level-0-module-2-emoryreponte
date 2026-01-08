@@ -70,11 +70,11 @@ void addSprinkle(int numberOfSprinkles){
 
 void addCherry(int numberOfCherrys){
   for(int i = 0; i < numberOfCherrys; i++){
-    fill(0,0,255);
+    fill(255,0,0);
     int minX = width/2-SCOOPSIZE/2 + 10;
     int maxX = SCOOPSIZE/3 +width/2 +10;
-    int minY = coneY-(SCOOPSIZE)/2-40;
-    int maxY = coneY*SCOOPSIZE;
+    int minY = 50;
+    int maxY = 50;
     int CherryAreaX = (int)random(minX, maxX);
     int CherryAreaY = (int)random(minY, maxY);
     ellipse(CherryAreaX,CherryAreaY,20,20);
